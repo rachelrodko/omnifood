@@ -53,6 +53,11 @@ letter spacing
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
 body {
   font-family: "rubik", sans-serif;
   line-height: 1;
@@ -76,6 +81,10 @@ html {
 
 .grid-4 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-5 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .grid-center-v {
@@ -117,6 +126,12 @@ html {
   letter-spacing: 0.75px;
 }
 
+.btn-form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn,
 .btn:link,
 .btn:visited {
   font-size: 1.6rem;
@@ -126,8 +141,17 @@ html {
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
+.btn-form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
 .btn-full:link,
 .btn-full:visited {
   background-color: #e67e22;
@@ -182,6 +206,27 @@ strong {
 .center-text {
   text-align: center;
 }
+
+.list {
+  list-style: none;
+  flex-direction: column;
+  gap: 1.6rem;
+  display: flex;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
 /************************************************/
 /* HEADER */
 /************************************************/
