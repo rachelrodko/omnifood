@@ -500,7 +500,7 @@
       hsla(28, 80%, 61%, 0.35),
       hsla(28, 80%, 52%, 0.35)
     ),
-    url("/img/eating.jpg");
+    url("../img/eating.jpg");
   background-size: cover;
   background-position: center;
   padding: none;
