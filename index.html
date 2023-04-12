@@ -3,21 +3,23 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Omnifood is an AI-powered food subscription that will make you eat healthy again 365 days a year. It's tailored to your personal tastes amd nutritional needs."/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="icon" href="img/favicon-icon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="apple-touch -icon" href="img/appletouch.png"/>
+    <link rel="manifest" href="manifest.webmanifest"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;1,600;1,700&display=swap" rel="stylesheet"> 
-
-
-
-
- <link rel="stylesheet" type="text/css" href="./css/style.css"/>
- <link rel="stylesheet" type="text/css" href="./css/general.css"/>
-     <link rel="stylesheet" type="text/css" href="./css/queries.css"/>
-      <script defer src="js/script.js"></script>
-
-  <title>Omnifood</title>
+  <link rel="stylesheet" href="css/general.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+   <link rel="stylesheet" href="css/queries.css"/>
+   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+   <script defer src="js/script.js"></script>
+ 
+  <title>Omnifood &mdash; Never cook again!</title>
 </head>
 <body>
 
@@ -29,13 +31,18 @@
 
     <nav class="main-nav">
    <ul class="main-nav-list">
-    <li><a class="main-nav-link" href="#">How it works</a></li>
-    <li><a class="main-nav-link"  href="#">Meals</a></li>
-    <li><a class="main-nav-link" href="#">Testimonials</a></li>
-    <li><a class="main-nav-link" href="#">Pricing</a></li>
-    <li><a class="main-nav-link nav-cta" href="#">Try for free!</a></li>
+    <li><a class="main-nav-link" href="#how">How it works</a></li>
+    <li><a class="main-nav-link"  href="#meals">Meals</a></li>
+    <li><a class="main-nav-link" href="#testimonials">Testimonials</a></li>
+    <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+    <li><a class="main-nav-link nav-cta" href="#cta">Try for free!</a></li>
    </ul>
     </nav>
+
+    <button class="btn-mobile-nav">
+      <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+    </button>
   </header>
   <main>
   <section class="section-hero">
@@ -45,8 +52,8 @@
         <h1 class="heading-primary">A healthy meal delivered to your door, every single day</h1>
         
         <p class="hero-description">The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs. </p>
-        <a href="#" class="btn btn-full margin-right-sm">Start eating well</a>
-        <a href="#" class="btn btn-outline">Learn more &darr;</a>
+        <a href="#cta" class="btn btn-full margin-right-sm">Start eating well</a>
+        <a href="#" class="btn btn-outline" id="#how">Learn more &darr;</a>
         
         <div class="delivered-meals">
           <div class="delivered-imgs">
@@ -62,7 +69,13 @@
 </div>
 </div>
 <div class="hero-img-box">
-  <img src="img/hero.png" alt="woman enjoying food, meals in storage container and food bowls on a table" class="hero-img">
+  <picture>
+    <source srcset="img/hero.webp" type="image/webp"/>
+     <source srcset="img/hero-min.png" type="image/png"/>
+
+       <img src="img/hero-min.png" alt="woman enjoying food, meals in storage container and food bowls on a table" class="hero-img">
+  </picture>
+
 </div>
 </div>
 </section>
@@ -82,7 +95,7 @@
 </section>
 
 
-<section class="section-how">
+<section class="section-how" id="how">
   <div class="container">
     <span class="subheading">How it works</span>
     <h2 class="heading-secondary">Your daily dose of health in 3 simple steps</h2>
@@ -127,7 +140,7 @@
 </section>
 
   
-<section class="section-meals">
+<section class="section-meals" id="meals">
 
   <div class="container center-text">
     <span class="subheading">Meals</span>
@@ -139,7 +152,7 @@
 <div class="container grid grid-3 margin-bottom-md">
   <div class="meal">
     <img src="img/meals/meal-1.jpg" class="meal-img" alt="Japanese Gyozas"/>
-    <div class="/omnifood/meal-content">
+    <div class="meal-content">
     <div class="meal-tags">
     <span class="tag tag-vegetarian">Vegetarian</span></div>
     <p class="meal-title">Japanese Gyozas</p>
@@ -202,7 +215,7 @@
   <a href="#" class="link">See all recipes &rarr;</a>
 </div>
 </section>
-<section class="section-testimonials">
+<section class="section-testimonials" id="testimonials">
   <div class="testimonials-container">
   <span class="subheading">Testimonials</span>
   <h2 class="heading-secondary">"I couldn't live without it now!"</h2>
@@ -295,7 +308,7 @@
 
   </div>
 </section>
-<section class="section-pricing">
+<section class="section-pricing" id="pricing">
   <div class="container">
     <span class="subheading">Pricing</span>
     <h2 class="heading-secondary">Eating well without breaking the bank</h2>
@@ -406,7 +419,7 @@
 </div>
 </div>
 </section>
-<section class="section-cta">
+<section class="section-cta" id="cta">
   <div class="container">
     <div class="cta">
  <div class="cta-text-box">
@@ -463,7 +476,7 @@
 
   
 </ul>
-      <p class="copyright">Copyright &copy; 2022 by Omnifood Ltd. All rights reserved</p>
+      <p class="copyright">Copyright &copy; <span class="year">2022</span> by Omnifood Ltd. All rights reserved</p>
   </div>
     <div class="address-col">
       
@@ -519,6 +532,5 @@
 
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-
 </body>
 </html>
